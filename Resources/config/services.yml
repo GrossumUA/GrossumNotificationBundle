@@ -1,0 +1,51 @@
+services:
+  grossum.notification.notifcation_sender.email:
+    class: %grossum.notification.notifcation_sender.email.class%
+    arguments:
+      - "@old_sound_rabbit_mq.send_email_producer"
+
+  grossum.notification.notifcation_sender.sms:
+    class: %grossum.notification.notifcation_sender.sms.class%
+    arguments:
+      - "@old_sound_rabbit_mq.send_sms_producer"
+
+  grossum.notification.notifcation_sender.push:
+    class: %grossum.notification.notifcation_sender.push.class%
+    arguments:
+      - "@old_sound_rabbit_mq.send_push_producer"
+
+  grossum.notification.notifcation_sender.web:
+    class: %grossum.notification.notifcation_sender.web.class%
+    arguments:
+      - "@old_sound_rabbit_mq.send_web_producer"
+
+  grossum.notification.event_listener.email_produce:
+    class: %grossum.notification.event_listener.email_produce.class%
+    arguments:
+      - "@grossum.notification.notifcation_sender.email"
+    tags:
+      - { name: kernel.event_listener, event: grossum.notification.event.send_email, method: produceNotifications }
+
+  grossum.notification.event_listener.sms_produce:
+    class: %grossum.notification.event_listener.sms_produce.class%
+    arguments:
+      - "@grossum.notification.notifcation_sender.sms"
+    tags:
+      - { name: kernel.event_listener, event: grossum.notification.event.send_sms_message, method: produceNotifications }
+
+  grossum.notification.event_listener.web_produce:
+    class: %grossum.notification.event_listener.web_produce.class%
+    arguments:
+      - "@grossum.notification.notifcation_sender.web"
+    tags:
+      - { name: kernel.event_listener, event: grossum.notification.event.send_notification, method: produceNotifications }
+      - { name: kernel.event_listener, event: grossum.notification.event.send_chat_message, method: produceNotifications }
+      - { name: kernel.event_listener, event: grossum.notification.event.send_entity_update, method: produceNotifications }
+      - { name: kernel.event_listener, event: grossum.notification.event.send_entity_delete, method: produceNotifications }
+
+  grossum.notification.event_listener.push_produce:
+    class: %grossum.notification.event_listener.push_produce.class%
+    arguments:
+      - "@grossum.notification.notifcation_sender.push"
+    tags:
+      - { name: kernel.event_listener, event: grossum.notification.event.send_push, method: produceNotifications }

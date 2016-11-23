@@ -1,0 +1,42 @@
+{
+  "name": "grossumua/notification-bundle",
+  "description": "Bundle to work with GrossumNotificationServer",
+  "type": "symfony-bundle",
+  "authors": [
+    {
+      "name": "Alexey Verkeenko",
+      "email": "trip.of.neo@gmail.com"
+    },
+    {
+      "name": "Dmytro Boiko",
+      "email": "berlad.myr@gmail.com"
+    }
+  ],
+  "keywords": [
+    "notification bundle",
+    "grossum"
+  ],
+  "license": [
+    "MIT"
+  ],
+  "require": {
+    "php": ">=7.0",
+    "symfony/framework-bundle": "~2.3|~3.0",
+    "php-amqplib/rabbitmq-bundle": "~1.6"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "2.*",
+    "phpmd/phpmd" : "@stable",
+    "sebastian/phpcpd": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "GrossumUA\\NotificationBundle\\": ""
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.1.x-dev"
+    }
+  }
+}

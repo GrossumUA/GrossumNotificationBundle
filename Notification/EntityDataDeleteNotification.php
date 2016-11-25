@@ -33,9 +33,6 @@ class EntityDataDeleteNotification implements NotificationInterface
      */
     private $global;
 
-    /**
-     * Constructor
-     */
     public function __construct()
     {
         $this->global = false;
@@ -123,7 +120,7 @@ class EntityDataDeleteNotification implements NotificationInterface
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isGlobal()
     {

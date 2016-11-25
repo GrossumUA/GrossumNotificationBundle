@@ -4,10 +4,6 @@ namespace GrossumUA\NotificationBundle\Notification;
 
 use GrossumUA\NotificationBundle\Exception\PropertyNotFountException;
 
-/**
- * Class EmailNotification
- * @package GrossumUA\NotificationBundle\Notification
- */
 class EmailNotification implements NotificationInterface
 {
     /**
@@ -263,7 +259,7 @@ class EmailNotification implements NotificationInterface
     }
 
     /**
-     * {@Inheritdoc}
+     * {@inheritdoc}
      */
     public function exportData()
     {
@@ -285,7 +281,7 @@ class EmailNotification implements NotificationInterface
     }
 
     /**
-     * {@Inheritdoc}
+     * {@inheritdoc}
      */
     public function isValid()
     {
@@ -302,7 +298,7 @@ class EmailNotification implements NotificationInterface
 
         foreach ($properties as $propertyKey => $propertyValue) {
             if (empty($propertyValue)) {
-                throw new PropertyNotFountException('Property ' . $propertyKey . ' is not set');
+                throw new PropertyNotFountException(sprintf('Property %s is not set', $propertyKey));
             }
         }
 

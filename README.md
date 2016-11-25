@@ -2,7 +2,7 @@ NotificationBundle to work with GrossumNotificationServer
 
 Instalation:
 
-    composer require ...
+    composer require grossum/notification-bundle
     
 Register the bundle:
 
@@ -94,4 +94,3 @@ Example usage:
         new NotificationCreatedEvent($userNotification)
     );
 ``` 
-           

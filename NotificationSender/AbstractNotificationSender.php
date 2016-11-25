@@ -5,10 +5,6 @@ namespace GrossumUA\NotificationBundle\NotificationSender;
 use GrossumUA\NotificationBundle\Notification\NotificationInterface;
 use OldSound\RabbitMqBundle\RabbitMq\ProducerInterface;
 
-/**
- * Class AbstractNotificationSender
- * @package GrossumUA\NotificationBundle\NotificationSender
- */
 abstract class AbstractNotificationSender implements NotificationSenderInterface
 {
     /** @var ProducerInterface $producer */
@@ -23,7 +19,7 @@ abstract class AbstractNotificationSender implements NotificationSenderInterface
     }
 
     /**
-     * {@Inheritdoc}
+     * {@inheritdoc}
      */
     public function sendNotification(NotificationInterface $message)
     {

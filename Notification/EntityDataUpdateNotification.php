@@ -2,10 +2,6 @@
 
 namespace GrossumUA\NotificationBundle\Notification;
 
-/**
- * Class EntityDataUpdateNotification
- * @package GrossumUA\NotificationBundle\Notification
- */
 class EntityDataUpdateNotification implements NotificationInterface
 {
     /**
@@ -33,9 +29,6 @@ class EntityDataUpdateNotification implements NotificationInterface
      */
     private $global;
 
-    /**
-     * Constructor
-     */
     public function __construct()
     {
         $this->global = false;
@@ -123,7 +116,7 @@ class EntityDataUpdateNotification implements NotificationInterface
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isGlobal(): bool
     {

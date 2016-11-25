@@ -2,10 +2,6 @@
 
 namespace GrossumUA\NotificationBundle\Notification;
 
-/**
- * Interface NotificationInterface
- * @package GrossumUA\NotificationBundle\Notification
- */
 interface NotificationInterface
 {
     const SOCKET_NOTIFICATION_TYPE_ENTITY_UPDATE = 'entity_update';
@@ -23,7 +19,7 @@ interface NotificationInterface
     public function exportData();
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isValid();
 }

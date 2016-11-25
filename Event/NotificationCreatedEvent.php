@@ -2,13 +2,9 @@
 
 namespace GrossumUA\NotificationBundle\Event;
 
-use GrossumUA\NotificationBundle\Notification\NotificationInterface;
 use Symfony\Component\EventDispatcher\Event;
+use GrossumUA\NotificationBundle\Notification\NotificationInterface;
 
-/**
- * Class NotificationCreatedEvent
- * @package GrossumUA\NotificationBundle\Event
- */
 class NotificationCreatedEvent extends Event implements NotificationEventInterface
 {
     /**
@@ -17,8 +13,6 @@ class NotificationCreatedEvent extends Event implements NotificationEventInterfa
     private $notification;
 
     /**
-     * NotificationCreatedEvent constructor.
-     *
      * @param NotificationInterface $notification
      */
     public function __construct(NotificationInterface $notification)
@@ -27,7 +21,7 @@ class NotificationCreatedEvent extends Event implements NotificationEventInterfa
     }
 
     /**
-     * @return NotificationInterface
+     * {@inheritdoc}
      */
     public function getNotification(): NotificationInterface
     {

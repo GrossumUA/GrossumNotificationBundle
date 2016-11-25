@@ -1,3 +1,0 @@
-#notification_homepage:
-#    path:     /
-#    defaults: { _controller: NotificationBundle:Default:index }

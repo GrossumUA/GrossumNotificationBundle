@@ -4,10 +4,6 @@ namespace GrossumUA\NotificationBundle\EventListener;
 
 use GrossumUA\NotificationBundle\Event\NotificationEventInterface;
 
-/**
- * Interface NotificationProduceListenerInterface
- * @package GrossumUA\NotificationBundle\EventListener
- */
 interface NotificationProduceListenerInterface
 {
     /**

@@ -68,7 +68,7 @@ class SmsNotification implements NotificationInterface
     }
 
     /**
-     * {@Inheritdoc}
+     * {@inheritdoc}
      */
     public function isValid()
     {
@@ -79,7 +79,7 @@ class SmsNotification implements NotificationInterface
 
         foreach ($properties as $propertyKey => $propertyValue) {
             if (empty($propertyValue)) {
-                throw new PropertyNotFountException('Property ' . $propertyKey . ' is not set');
+                throw new PropertyNotFountException(sprintf('Property %s is not set', $propertyKey));
             }
         }
 

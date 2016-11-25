@@ -1,5 +1,5 @@
 {
-  "name": "grossumua/notification-bundle",
+  "name": "grossum/notification-bundle",
   "description": "Bundle to work with GrossumNotificationServer",
   "type": "symfony-bundle",
   "authors": [
@@ -8,7 +8,7 @@
       "email": "trip.of.neo@gmail.com"
     },
     {
-      "name": "Dmytro Boiko",
+      "name": "Myroslav Berlad",
       "email": "berlad.myr@gmail.com"
     }
   ],

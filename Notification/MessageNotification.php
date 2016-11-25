@@ -2,12 +2,6 @@
 
 namespace GrossumUA\NotificationBundle\Notification;
 
-use GrossumUA\NotificationBundle\Exception\PropertyNotFountException;
-
-/**
- * Class MessageNotification
- * @package GrossumUA\NotificationBundle\Notification
- */
 class MessageNotification implements NotificationInterface
 {
     /**
@@ -156,7 +150,7 @@ class MessageNotification implements NotificationInterface
     }
 
     /**
-     * @return mixed
+     * @return array
      */
     public function getRecipientHashes()
     {
@@ -164,7 +158,7 @@ class MessageNotification implements NotificationInterface
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isGlobal(): bool
     {
@@ -172,7 +166,7 @@ class MessageNotification implements NotificationInterface
     }
 
     /**
-     * @param boolean $global
+     * @param bool $global
      */
     public function setGlobal(bool $global)
     {
@@ -180,7 +174,7 @@ class MessageNotification implements NotificationInterface
     }
 
     /**
-     * @param mixed $recipientHashes
+     * @param array $recipientHashes
      */
     public function setRecipientHashes($recipientHashes)
     {

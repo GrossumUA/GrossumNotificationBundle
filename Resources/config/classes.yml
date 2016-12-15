@@ -1,8 +1,8 @@
 parameters:
-  grossum.notification.notifcation_sender.email.class: GrossumUA\NotificationBundle\NotificationSender\EmailNotificationSender
-  grossum.notification.notifcation_sender.sms.class: GrossumUA\NotificationBundle\NotificationSender\SmsNotificationSender
-  grossum.notification.notifcation_sender.push.class: GrossumUA\NotificationBundle\NotificationSender\PushNotificationSender
-  grossum.notification.notifcation_sender.web.class: GrossumUA\NotificationBundle\NotificationSender\WebNotificationSender
+  grossum.notification.notification_sender.email.class: GrossumUA\NotificationBundle\NotificationSender\EmailNotificationSender
+  grossum.notification.notification_sender.sms.class: GrossumUA\NotificationBundle\NotificationSender\SmsNotificationSender
+  grossum.notification.notification_sender.push.class: GrossumUA\NotificationBundle\NotificationSender\PushNotificationSender
+  grossum.notification.notification_sender.web.class: GrossumUA\NotificationBundle\NotificationSender\WebNotificationSender
   grossum.notification.event_listener.email_produce.class: GrossumUA\NotificationBundle\EventListener\EmailNotificationProduceListener
   grossum.notification.event_listener.sms_produce.class: GrossumUA\NotificationBundle\EventListener\SmsNotificationProduceListener
   grossum.notification.event_listener.web_produce.class: GrossumUA\NotificationBundle\EventListener\WebNotificationProduceListener
